@@ -8,14 +8,6 @@ run_qa(
             ignore = (
                 :GradientConfig, :derivative, :gradient, :gradient!,  # ForwardDiff: not public
                 :plot,                                                # RecipesBase: not public
-                :depwarn,                                             # Base: not public (Julia 1.10)
-            ),
-        ),
-        all_explicit_imports_are_public = (;
-            ignore = (
-                # SciMLBase: not public (exported/public-declared upstream pending)
-                :AbstractDynamicalODEProblem, :AbstractSciMLSolution, :FunctionArgumentsError,
-                :NullParameters, :TooFewArgumentsError, :TooManyArgumentsError, :numargs,
             ),
         ),
     ),
